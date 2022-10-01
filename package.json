@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "nest build",
+    "package": "cti entrypoint -n ./",
+    "build": "yarn package && nest build",
     "start:dev": "NODE_ENV=development SERVER_STATIC_CONTENT=1 nest start --watch"
   },
+  "main": "entrypoint",
   "dependencies": {
     "@nestjs/common": "^9.0.11",
     "@nestjs/core": "^9.0.11",
@@ -16,6 +18,7 @@
   },
   "devDependencies": {
     "@nestjs/cli": "^9.1.2",
+    "create-ts-index": "^1.14.0",
     "typescript": "^4.0.5"
   }
 }
