@@ -2,6 +2,8 @@
   "name": "poc-public",
   "version": "1.0.0",
   "private": true,
+  "man": "dist/entrypoint.js",
+  "types": "dist/entrypoint.d.js",
   "scripts": {
     "package": "cti entrypoint -n ./",
     "build": "yarn package && nest build",
