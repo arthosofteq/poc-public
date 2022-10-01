@@ -6,15 +6,15 @@ import { DatabaseProvider } from 'src/modules/database/providers/database.provid
 @Injectable()
 export class InMemoryDatabaseProvider extends DatabaseProvider {
   private DBS = {
-    list_db_1: {
-      id: 'list_db_1',
-      name: 'list_db_1',
+    in_mem_db_1: {
+      id: 'in_mem_db_1',
+      name: 'in_mem_db_1',
       host: 'localhost',
       port: 6379,
     },
-    list_db_2: {
-      id: 'list_db_2',
-      name: 'list_db_2',
+    in_mem_db_2: {
+      id: 'in_mem_db_2',
+      name: 'in_mem_db_2',
       host: 'localhost',
       port: 6380,
       password: 'password'
