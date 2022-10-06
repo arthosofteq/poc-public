@@ -4,13 +4,13 @@ import { DatabaseService } from 'src/modules/database/database.service';
 
 @Module({})
 export class DatabaseModule {
-  static register(providers?: Provider[]) {
+  static register(databaseProvider: Provider) {
     return {
       module: DatabaseModule,
       controllers: [DatabaseController],
       providers: [
         DatabaseService,
-        ...providers,
+        ...[databaseProvider],
       ],
     }
   }

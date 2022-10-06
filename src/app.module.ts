@@ -5,10 +5,11 @@ import { InMemoryDatabaseProvider } from 'src/modules/database/providers/in-memo
 
 @Module({
   imports: [
-    DatabaseModule.register([{
+    DatabaseModule.register({
       provide: DatabaseProvider,
       useClass: InMemoryDatabaseProvider,
-    }]),
+    }),
+    // import other modules here
   ]
 })
 export class AppModule {}
